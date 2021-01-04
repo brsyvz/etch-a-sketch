@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 id="header">Etch-a-Sketch</h1>
+    </header>
+
+    <div class="mainContainer">
+      <div class="btnPanel">
+        <button id="increase" class="btns">
+          More <i class="fa fa-plus-square"></i>
+        </button>
+        <button id="decrease" class="btns">
+          Less <i class="fa fa-minus-square"></i>
+        </button>
+
+        <button id="userInput" class="btns">
+          Custom <i class="fa fa-pencil-square-o"></i>
+        </button>
+        <button id="clearBtn" class="btns">
+          Erase <i class="fa fa-eraser"></i>
+        </button>
+
+        <button id="reset" class="btns">
+          Reset <i class="fa fa-trash"></i>
+        </button>
+      </div>
+
+      <div id="container"></div>
+
+      <div class="colorPicker">
+        <label>Color Picker</label>
+        <div id="color-picker-wrapper">
+          <input type="color" value="#ff0000" id="color-picker" />
+        </div>
+      </div>
+
+      <div class="log">
+        <label for="" id="gridCounter"></label>
+      </div>
+    </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

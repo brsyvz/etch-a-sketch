@@ -1,0 +1,114 @@
+:root {
+  --rows: 1;
+  --columns: 1;
+}
+
+body {
+  color: dodgerblue;
+}
+
+header > #header {
+  font-size: 36px;
+  text-align: center;
+  margin: 6px;
+}
+
+.mainContainer {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 20px;
+  grid-template-areas:
+    "sidebar main colorPicker"
+    "log log log ";
+}
+
+/* LEFT */
+.btnPanel {
+  max-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-self: right;
+  align-items: flex-end;
+  margin-right: 10px;
+  grid-area: sidebar;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+  align-self: center;
+}
+
+.btnPanel > .btns {
+  width: 91%;
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btnPanel > .btns:hover {
+  background-color: RoyalBlue;
+}
+
+/* MIDDLE */
+#container {
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  border: 10px solid #ebf0e7a6;
+  display: grid;
+  width: 650px;
+  height: 500px;
+  grid-template-rows: repeat(var(--rows), 1fr);
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-area: main;
+  background: white;
+}
+
+.gridCells {
+  background: rgba(255, 255, 255, 0.596);
+  transition: all 0.1s ease;
+  border: 1px solid rgba(195, 208, 216, 0.842);
+}
+
+/* RIGHT */
+.colorPicker {
+  grid-area: colorPicker;
+  margin-left: 10px;
+  margin-top: 20px;
+  text-align: left;
+}
+.colorPicker > #color-picker-wrapper {
+  max-width: 64px;
+  border-radius: 2px;
+  margin-left: 6px;
+  margin-top: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+
+input[type="color"] {
+  opacity: 0;
+  padding: 15px;
+}
+
+input {
+  cursor: pointer;
+}
+
+
+/* BOTTOM */
+.log {
+  grid-area: log;
+  text-align: center;
+  font-size: 28px;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+
+
+
