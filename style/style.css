@@ -82,7 +82,7 @@ header > #header {
   margin-top: 20px;
   text-align: left;
 }
-.colorPicker > #color-picker-wrapper {
+.colorPicker > #colorPickerWrapper {
   max-width: 64px;
   border-radius: 2px;
   margin-left: 6px;

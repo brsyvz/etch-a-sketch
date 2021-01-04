@@ -1,7 +1,7 @@
 let parentContainer = document.getElementById("container");
 let gridSize = 32;
-let color_picker = document.getElementById("color-picker");
-let color_picker_wrapper = document.getElementById("color-picker-wrapper");
+let colorPicker = document.getElementById("colorPicker");
+let colorPickerWrapper = document.getElementById("colorPickerWrapper");
 
 document.getElementById("userInput").onclick = setCustomGrid;
 document.getElementById("increase").onclick = increaseGrids;
@@ -97,10 +97,10 @@ function updateLogOnReset() {
   updateLog();
 }
 
-color_picker.onchange = function () {
-  color_picker_wrapper.style.backgroundColor = color_picker.value;
+colorPicker.onchange = function () {
+  colorPickerWrapper.style.backgroundColor = colorPicker.value;
 };
-color_picker_wrapper.style.backgroundColor = color_picker.value;
+colorPickerWrapper.style.backgroundColor = colorPicker.value;
 
 generateGrids(gridSize, gridSize);
 
