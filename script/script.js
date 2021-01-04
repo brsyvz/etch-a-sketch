@@ -70,7 +70,7 @@ function setCustomGrid() {
 }
 
 function paint(x) {
-  x.style.background = color_picker.value;
+  x.style.background = colorPicker.value;
 }
 
 (function clearBackground() {
