@@ -14,28 +14,20 @@ header > #header {
 }
 
 .mainContainer {
-  display: grid;
-  padding: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 20px;
-  grid-template-areas:
-    "sidebar main colorPicker"
-    "log log log ";
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* LEFT */
 .btnPanel {
-  max-height: 250px;
+  height: 70px;
   display: flex;
   flex-direction: column;
-  justify-self: right;
-  align-items: flex-end;
+  align-self: flex-start;
   margin-right: 10px;
-  grid-area: sidebar;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-
-  align-self: center;
 }
 
 .btnPanel > .btns {
@@ -77,13 +69,13 @@ header > #header {
 
 /* RIGHT */
 .colorPicker {
-  grid-area: colorPicker;
+  align-self: flex-start;
   margin-left: 10px;
   margin-top: 20px;
   text-align: left;
 }
 .colorPicker > #colorPickerWrapper {
-  max-width: 64px;
+  width: 64px;
   border-radius: 2px;
   margin-left: 6px;
   margin-top: 5px;
@@ -99,16 +91,36 @@ input {
   cursor: pointer;
 }
 
-
 /* BOTTOM */
 .log {
-  grid-area: log;
   text-align: center;
   font-size: 28px;
   font-style: italic;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
+@media only screen and (max-width: 815px) {
+  .mainContainer {
+    flex-direction: column;
+    order: 1;
+  }
+  #container {
+    width: 95%;
+  }
 
+  .btnPanel {
+    flex-direction: row;
+    order: 2;
+    height: auto;
+  }
 
+  .colorPicker {
+   
+    order: 2;
+    align-self: center;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
 
+  
+}

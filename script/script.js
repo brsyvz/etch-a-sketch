@@ -1,7 +1,7 @@
-let parentContainer = document.getElementById("container");
+const parentContainer = document.getElementById("container");
 let gridSize = 32;
-let colorPicker = document.getElementById("colorPicker");
-let colorPickerWrapper = document.getElementById("colorPickerWrapper");
+const colorPicker = document.getElementById("colorPicker");
+const colorPickerWrapper = document.getElementById("colorPickerWrapper");
 
 document.getElementById("userInput").onclick = setCustomGrid;
 document.getElementById("increase").onclick = increaseGrids;
@@ -11,15 +11,15 @@ document.getElementById("reset").onclick = updateLogOnReset;
 function generateGrids(rows, columns) {
   parentContainer.style.setProperty("--rows", rows);
   parentContainer.style.setProperty("--columns", columns);
-  for (i = 0; i < rows * columns; i++) {
-    let gridCells = document.createElement("div");
+  for (let i = 0; i < rows * columns; i++) {
+    const gridCells = document.createElement("div");
     gridCells.setAttribute("onmouseover", "paint(this);");
     parentContainer.appendChild(gridCells).className = "gridCells";
   }
 }
 
 function removeGrids() {
-  let reset = Array.from(parentContainer.childNodes);
+  const reset = Array.from(parentContainer.childNodes);
   reset.forEach((el) => {
     parentContainer.removeChild(el);
   });
@@ -27,7 +27,6 @@ function removeGrids() {
 
 function increaseGrids() {
   gridSize += 8;
-
   removeGrids();
   generateGrids(gridSize, gridSize);
 
@@ -74,7 +73,7 @@ function paint(x) {
 }
 
 (function clearBackground() {
-  let clearBtn = document.getElementById("clearBtn");
+  const clearBtn = document.getElementById("clearBtn");
   let changeBackground = Array.from(parentContainer.childNodes);
   changeBackground.forEach((el) => {
     el.style.background = "initial";
@@ -90,7 +89,7 @@ function updateLog() {
 
 function updateLogOnReset() {
   gridSize = 0;
-  let reset = Array.from(parentContainer.childNodes);
+  const reset = Array.from(parentContainer.childNodes);
   reset.forEach((el) => {
     parentContainer.removeChild(el);
   });
