@@ -64,7 +64,7 @@ header > #header {
 .gridCells {
   background: rgba(255, 255, 255, 0.596);
   transition: all 0.1s ease;
-  border: 1px solid rgba(195, 208, 216, 0.842);
+  border: 1px solid rgba(195, 208, 216, 0.164);
 }
 
 /* RIGHT */
