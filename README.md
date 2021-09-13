@@ -2,7 +2,7 @@ Live: https://brsyvz.github.io/Etch-a-Sketch/
 
 ## Contents:
 1 - [About](#about)\
-2 - [Game logic](#gl)\
+2 - [Game logic](#gl)
 
 <img width="645" alt="Screenshot_90" src="https://user-images.githubusercontent.com/55483569/133145960-d7724c4b-5d47-44c4-937d-9889cfc89e1f.png">
 
@@ -18,9 +18,8 @@ This project is an Implementation of mechanical drawing toy called [Etch-A-Sketc
 
 <h3 id="gl">Game logic</h3>
 
-
-- the "generateGrids" function is a key on this project. 
-- the "generateGrids" function creates grid of square div elemenets inside the container depend on the row and colum number we provide.
-- the "generateGrids" function takes two arguments, rows andolumns.
+- The "generateGrids" function is a key on this project. 
+- The "generateGrids" function creates grid of square div elemenets inside the container depend on the row and colum number we provide.
+- The "generateGrids" function takes two arguments, rows andolumns.
 
 
