@@ -5,7 +5,6 @@ Live: https://brsyvz.github.io/Etch-a-Sketch/
 2 - [Game logic](#gl)
 
 <img width="645" alt="Screenshot_90" src="https://user-images.githubusercontent.com/55483569/133145960-d7724c4b-5d47-44c4-937d-9889cfc89e1f.png">
-
 <h3 id="about">About</h3>
 
 This project is an Implementation of mechanical drawing toy called [Etch-A-Sketch](https://en.wikipedia.org/wiki/Etch_A_Sketch). 
