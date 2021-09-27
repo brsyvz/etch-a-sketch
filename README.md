@@ -1,4 +1,4 @@
-Live: https://brsyvz.github.io/Etch-a-Sketch/
+Live: https://brsyvz.github.io/etch-a-sketch/
 
 ## Contents:
 1 - [About](#about)\
